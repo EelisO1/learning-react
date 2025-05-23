@@ -6,6 +6,9 @@ import './index.css';
 import Game from './containers/Game';
 import reducer from './reducers';
 
+const container = document.getElementById('root');
+const root = ReactDOM.createRoot(container);
+
 /* eslint-disable no-underscore-dangle */
 const store = createStore(
   reducer, /* preloadedState, */
@@ -13,7 +16,7 @@ const store = createStore(
 );
 /* eslint-enable */
 
-ReactDOM.render(
+root.render(
   <Provider store={store}>
       <Game />
   </Provider>,
